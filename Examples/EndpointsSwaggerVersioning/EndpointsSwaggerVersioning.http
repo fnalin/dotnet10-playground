@@ -1,0 +1,39 @@
+@EndpointsSwaggerVersioning_HostAddress = https://localhost:7113
+
+### Demo - Default version (v1)
+GET {{EndpointsSwaggerVersioning_HostAddress}}/api/Demo
+Accept: application/json
+
+### Demo - URL Segment Versioning v1
+GET {{EndpointsSwaggerVersioning_HostAddress}}/api/v1/Demo
+Accept: application/json
+
+### Demo - URL Segment Versioning v2
+GET {{EndpointsSwaggerVersioning_HostAddress}}/api/v2/Demo
+Accept: application/json
+
+### Demo - Header Versioning v1
+GET {{EndpointsSwaggerVersioning_HostAddress}}/api/Demo
+Accept: application/json
+x-api-version: 1
+
+### Demo - Header Versioning v2
+GET {{EndpointsSwaggerVersioning_HostAddress}}/api/Demo
+Accept: application/json
+x-api-version: 2
+
+### Demo - Query String Versioning v1
+GET {{EndpointsSwaggerVersioning_HostAddress}}/api/Demo?api-version=1
+Accept: application/json
+
+### Demo - Query String Versioning v2
+GET {{EndpointsSwaggerVersioning_HostAddress}}/api/Demo?api-version=2
+Accept: application/json
+
+### Demo - Media Type Versioning v1
+GET {{EndpointsSwaggerVersioning_HostAddress}}/api/Demo
+Accept: application/json; api-version=1
+
+### Demo - Media Type Versioning v2
+GET {{EndpointsSwaggerVersioning_HostAddress}}/api/Demo
+Accept: application/json; api-version=2
