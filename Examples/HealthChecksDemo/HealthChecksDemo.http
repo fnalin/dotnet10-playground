@@ -1,0 +1,19 @@
+@HealthChecksDemo_HostAddress = http://localhost:5072
+
+### Get service information (root endpoint)
+GET {{HealthChecksDemo_HostAddress}}/
+Accept: application/json
+
+###
+
+### Health check - Liveness probe
+GET {{HealthChecksDemo_HostAddress}}/health/live
+Accept: application/json
+
+###
+
+### Health check - Readiness probe
+GET {{HealthChecksDemo_HostAddress}}/health/ready
+Accept: application/json
+
+###
