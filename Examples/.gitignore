@@ -482,3 +482,8 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
+
+# MySimpleMediator local SQLite database artifacts
+MySimpleMediator/DB/*.db
+MySimpleMediator/DB/*.db-shm
+MySimpleMediator/DB/*.db-wal
