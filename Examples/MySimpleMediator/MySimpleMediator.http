@@ -1,0 +1,51 @@
+@baseUrl = https://localhost:7013
+
+###
+# Health check simples
+GET {{baseUrl}}/products
+Accept: application/json
+
+###
+
+# Criar produto válido
+POST {{baseUrl}}/products
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Notebook Dell",
+  "price": 4500,
+  "stock": 5
+}
+
+###
+
+# Criar produto válido
+POST {{baseUrl}}/products
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Mouse Logitech",
+  "price": 120,
+  "stock": 30
+}
+
+###
+
+# Criar produto inválido (testar validação)
+POST {{baseUrl}}/products
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "",
+  "price": 0,
+  "stock": -1
+}
+
+###
+
+# Listar produtos
+GET {{baseUrl}}/products
+Accept: application/json
