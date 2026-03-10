@@ -11,6 +11,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySimpleMediator", "MySimpleMediator\MySimpleMediator.csproj", "{5FDDD124-3E9C-489E-A886-FFD373084738}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MyMediator", "MyMediator", "{4727ED8C-9062-43AB-BDB6-CEAF434DFC73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMediator.Core", "MyMediator\MyMediator.Core\MyMediator.Core.csproj", "{A5BD880A-0A7B-432D-A130-5A1ADF325640}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMediator.Pipeline", "MyMediator\MyMediator.Pipeline\MyMediator.Pipeline.csproj", "{66F5AF4A-9A20-4199-A6C7-59AC778C2B8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMediator.DependencyInjection", "MyMediator\MyMediator.DependencyInjection\MyMediator.DependencyInjection.csproj", "{C4FEE189-6123-466D-A6F6-017A96BA751E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMediator.EntityFrameworkCore", "MyMediator\MyMediator.EntityFrameworkCore\MyMediator.EntityFrameworkCore.csproj", "{5989CDD2-A6F6-4EA3-96DF-1FCEB731BD02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.Api", "MyMediator\Sample.Api\Sample.Api.csproj", "{FB327D3D-4931-4418-A7E5-CF56307CA016}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,5 +41,32 @@ Global
 		{5FDDD124-3E9C-489E-A886-FFD373084738}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5FDDD124-3E9C-489E-A886-FFD373084738}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5FDDD124-3E9C-489E-A886-FFD373084738}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5BD880A-0A7B-432D-A130-5A1ADF325640}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5BD880A-0A7B-432D-A130-5A1ADF325640}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5BD880A-0A7B-432D-A130-5A1ADF325640}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5BD880A-0A7B-432D-A130-5A1ADF325640}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66F5AF4A-9A20-4199-A6C7-59AC778C2B8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66F5AF4A-9A20-4199-A6C7-59AC778C2B8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66F5AF4A-9A20-4199-A6C7-59AC778C2B8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66F5AF4A-9A20-4199-A6C7-59AC778C2B8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4FEE189-6123-466D-A6F6-017A96BA751E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4FEE189-6123-466D-A6F6-017A96BA751E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4FEE189-6123-466D-A6F6-017A96BA751E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4FEE189-6123-466D-A6F6-017A96BA751E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5989CDD2-A6F6-4EA3-96DF-1FCEB731BD02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5989CDD2-A6F6-4EA3-96DF-1FCEB731BD02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5989CDD2-A6F6-4EA3-96DF-1FCEB731BD02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5989CDD2-A6F6-4EA3-96DF-1FCEB731BD02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB327D3D-4931-4418-A7E5-CF56307CA016}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB327D3D-4931-4418-A7E5-CF56307CA016}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB327D3D-4931-4418-A7E5-CF56307CA016}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB327D3D-4931-4418-A7E5-CF56307CA016}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A5BD880A-0A7B-432D-A130-5A1ADF325640} = {4727ED8C-9062-43AB-BDB6-CEAF434DFC73}
+		{66F5AF4A-9A20-4199-A6C7-59AC778C2B8D} = {4727ED8C-9062-43AB-BDB6-CEAF434DFC73}
+		{C4FEE189-6123-466D-A6F6-017A96BA751E} = {4727ED8C-9062-43AB-BDB6-CEAF434DFC73}
+		{5989CDD2-A6F6-4EA3-96DF-1FCEB731BD02} = {4727ED8C-9062-43AB-BDB6-CEAF434DFC73}
+		{FB327D3D-4931-4418-A7E5-CF56307CA016} = {4727ED8C-9062-43AB-BDB6-CEAF434DFC73}
 	EndGlobalSection
 EndGlobal
