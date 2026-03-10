@@ -1,0 +1,31 @@
+@host = https://localhost:7273
+@id = b626dd02-534f-4bb9-8c0b-824f1c66aea1
+
+###Get all products
+GET {{host}}/products
+Accept: application/json
+
+###Get a product by id
+GET {{host}}/products/{{id}}
+Accept: application/json
+
+###Add a new product
+POST {{host}}/products
+Content-Type: application/json
+
+{
+  "name": "Notebook",
+  "price": 3500.50
+}
+
+###Update an existing product
+PUT {{host}}/products/{{id}}
+Content-Type: application/json
+
+{
+  "name": "Notebook Pro",
+  "price": 4200.00
+}
+
+###Delete a product
+DELETE {{host}}/products/{{id}}
