@@ -1,0 +1,73 @@
+@model Demo.Customers.Mvc.Models.CustomersPageViewModel
+
+@{
+    ViewData["Title"] = "Clientes";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-3">Clientes</h2>
+
+    @if (Model.HasFallback)
+    {
+        <div class="alert alert-warning" role="alert">
+            @Model.ErrorMessage
+        </div>
+    }
+
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <table class="table table-striped table-hover align-middle">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Cidade</th>
+                        <th>Data Cadastro</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.Data.Items.Any())
+                    {
+                        foreach (var customer in Model.Data.Items)
+                        {
+                            <tr>
+                                <td>@customer.Id</td>
+                                <td>@customer.Name</td>
+                                <td>@customer.Email</td>
+                                <td>@customer.City</td>
+                                <td>@customer.CreatedAt.ToString("dd/MM/yyyy")</td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="5" class="text-center">Nenhum cliente encontrado.</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+            @if (Model.Data.TotalPages > 1)
+            {
+                <nav aria-label="Paginação de clientes">
+                    <ul class="pagination">
+                        @for (var i = 1; i <= Model.Data.TotalPages; i++)
+                        {
+                            <li class="page-item @(i == Model.Data.Page ? "active" : "")">
+                                <a class="page-link"
+                                   asp-controller="Customers"
+                                   asp-action="Index"
+                                   asp-route-page="@i"
+                                   asp-route-pageSize="@Model.Data.PageSize">
+                                    @i
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                </nav>
+            }
+        </div>
+    </div>
+</div>
